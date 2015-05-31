@@ -1,8 +1,15 @@
 package com.ucfsurveys.ucfsurveys;
 
 import android.app.Activity;
+import android.app.LauncherActivity.ListItem;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,11 +17,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
-public class SurveySelection extends Activity implements View.OnClickListener {
-    int i = 0;
-    TextView textView;
+public class SurveySelection extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
+    int i, selectedPosition;
+    long selectedId;
+    TextView titleView;
+    TextView selectedView;
+    Button selectSurveyButton;
     ListView SurveyList;
     ArrayAdapter mArrayAdapter;
     ArrayList<String> mNameList = new ArrayList<String>();
@@ -22,22 +33,37 @@ public class SurveySelection extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_selection);
-        textView = (TextView)findViewById(R.id.survey_available_text);
-
+        titleView = (TextView)findViewById(R.id.survey_available_text);
+        selectSurveyButton = (Button)findViewById(R.id.select_survey_btn);
         SurveyList = (ListView)findViewById(R.id.Survey_Listview);
-        for(; i < 10; i++){
+        for(i=0; i < 5; i++){
             mNameList.add(getString(R.string.survey_name) + i);
         }
         mArrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, mNameList);
 
         SurveyList.setAdapter(mArrayAdapter);
+
+        selectSurveyButton.setOnClickListener(this);
+        SurveyList.setOnItemClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
-        i++;
-        mNameList.add(getString(R.string.survey_name) + i);
-        mArrayAdapter.notifyDataSetChanged();
+        Intent nextActivity = new Intent(this, QuestionActivity.class);
+        nextActivity.putExtra(Intent.EXTRA_TEXT, selectedView.getText());
+        startActivity(nextActivity);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if(selectedView!=null){
+            selectedView.setBackgroundColor(Color.WHITE);
+        }
+        selectedId = id;
+        selectedPosition = position;
+        selectedView = (TextView)view;
+        selectedView.setBackgroundColor(Color.LTGRAY);
     }
 }
+//Zbft195*

@@ -6,4 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="survey_name">"Survey "</string>
     <string name="take_survey">Take a Survey</string>
+    <string name="title_activity_question">QuestionActivity</string>
+    <string name="question">Question #</string>
+
 </resources>
