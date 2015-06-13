@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class QuestionActivity extends Activity {
     TextView questionText;
+    AnswerView answerView;
+    AnswerViewFactory answerViewFactory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,9 @@ public class QuestionActivity extends Activity {
             String value = extras.getString(Intent.EXTRA_TEXT);
             questionText.setText(value);
         }
+        //answerViewFactory = new AnswerViewFactory(this,);
     }
+
+
 
 }

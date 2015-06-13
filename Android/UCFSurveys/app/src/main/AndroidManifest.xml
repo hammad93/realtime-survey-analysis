@@ -10,15 +10,20 @@
         <activity
             android:name=".SurveySelection"
             android:label="@string/title_activity_survey_selection" >
+
+        </activity>
+        <activity
+            android:name=".QuestionActivity"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name=".UCFSurveys"
+            android:label="UCFSurveys">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".QuestionActivity"
-            android:label="@string/title_activity_question" >
         </activity>
     </application>
 

@@ -8,5 +8,7 @@
     <string name="take_survey">Take a Survey</string>
     <string name="title_activity_question">QuestionActivity</string>
     <string name="question">Question #</string>
-
+    <string name="title_activity_ucfsurveys">UCF Surveys App</string>
+    <string name="get_surveys">Take a survey</string>
+    <string name="get_results">View Survey Results</string>
 </resources>

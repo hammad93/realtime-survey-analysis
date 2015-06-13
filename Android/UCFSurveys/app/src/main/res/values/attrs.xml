@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AnswerView">
+
+    </declare-styleable>
+    <declare-styleable name="MultipleChoiceAnswerView">
+        <attr name="answerText" format="string"/>
+        <attr name="selected" format="boolean" />
+    </declare-styleable>
+</resources>
