@@ -1,23 +1,17 @@
 package com.ucfsurveys.ucfsurveys;
 
 import android.app.Activity;
-import android.app.LauncherActivity.ListItem;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class SurveySelection extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
@@ -50,7 +44,7 @@ public class SurveySelection extends Activity implements View.OnClickListener, A
 
     @Override
     public void onClick(View v) {
-        Intent nextActivity = new Intent(this, QuestionActivity.class);
+        Intent nextActivity = new Intent(this, MultipleChoiceQuestion.class);
         nextActivity.putExtra(Intent.EXTRA_TEXT, selectedView.getText());
         startActivity(nextActivity);
     }

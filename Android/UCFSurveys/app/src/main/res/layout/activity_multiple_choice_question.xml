@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.ucfsurveys.ucfsurveys.QuestionActivity">
+    tools:context="com.ucfsurveys.ucfsurveys.MultipleChoiceQuestion">
 
     <TextView android:id="@+id/titleText" android:text="@string/question" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -12,16 +12,22 @@
     <TextView
         android:layout_below="@+id/titleText"
         android:id="@+id/QuestionText"
-        android:text="asdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <view
+    android:text="asdf"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <ListView
+        android:layout_below="@+id/QuestionText"
+        android:id="@+id/answerList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        class="com.ucfsurveys.ucfsurveys.AnswerView"
-        android:id="@+id/view"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/nextButton">
 
+    </ListView>
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/next_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

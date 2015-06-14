@@ -13,8 +13,8 @@
 
         </activity>
         <activity
-            android:name=".QuestionActivity"
-            android:label="@string/title_activity_question" >
+            android:name=".MultipleChoiceQuestion"
+            android:label="MultipleChoiceQuestion" >
         </activity>
         <activity
             android:name=".UCFSurveys"
@@ -25,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MultipleSelectionQuestion"
+            android:label="MultipleSelectionQuestion"/>
+        <activity android:name=".TextQuestion"
+            android:label="TextQuestion"/>
     </application>
 
 </manifest>

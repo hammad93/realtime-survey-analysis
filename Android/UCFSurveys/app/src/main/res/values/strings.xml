@@ -11,4 +11,5 @@
     <string name="title_activity_ucfsurveys">UCF Surveys App</string>
     <string name="get_surveys">Take a survey</string>
     <string name="get_results">View Survey Results</string>
+    <string name="next_question">Next Question</string>
 </resources>
