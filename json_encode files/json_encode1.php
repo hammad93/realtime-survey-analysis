@@ -15,9 +15,10 @@ if($link === false){
 }
 
 $result = mysqli_query($link,"SELECT * FROM `SURVEY_1` WHERE 1");
-
-while($row = mysqli_fetch_array($result)){
-	echo json_encode($row);
+$response = array();
+while($row = mysqli_fetch_assoc($result)){
+	$response[] = $row;
 }
+ echo json_encode($response);
  
 ?>
