@@ -17,52 +17,64 @@ $resultTotal = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHER
 echo $resultTotal; 
 
 $result1 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 1 AND answer = 1 ");
-echo ($result1 / $resultTotal) * 100;
+$result1_1total = ($result1 / $resultTotal) * 100;
+echo $result1_1total; 
 
 $result2 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 1 AND answer = 2 ");
-echo ($result2 / $resultTotal) * 100; 
+$result1_2total = ($result2 / $resultTotal) * 100;
+echo $result1_2total; 
 
-$result4 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 1 AND answer = 3 ");
-echo ($result3 / $resultTotal) * 100; 
+$result3 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 1 AND answer = 3 ");
+$result1_3total = ($result3 / $resultTotal) * 100;
+echo $result1_3total; 
 
-$result5 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 1 AND answer = 4 ");
-echo ($result5 / $resultTotal) * 100; 
+$result4 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 1 AND answer = 4 ");
+$result1_4total = ($result4 / $resultTotal) * 100;
+echo $result1_4total; 
 
 
 //results for Question 2
 
 
-$resultTotal = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 ");
-echo $resultTotal; 
+$result2Total = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 ");
+echo $result2Total; 
 
 $result1 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 AND answer = 1 ");
-echo ($result1 / $resultTotal) * 100;
+$result2_1total = ($result1 / $result2Total) * 100;
+echo $result2_1total; 
 
 $result2 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 AND answer = 2 ");
-echo ($result2 / $resultTotal) * 100; 
+$result2_2total = ($result2 / $result2Total) * 100;
+echo $result2_2total;  
 
-$result4 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 AND answer = 3 ");
-echo ($result3 / $resultTotal) * 100; 
+$result3 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 AND answer = 3 ");
+$result2_3total = ($result3 / $result2Total) * 100;
+echo $result2_3total; 
 
-$result5 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 AND answer = 4 ");
-echo ($result5 / $resultTotal) * 100; 
+$result4 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 2 AND answer = 4 ");
+$result2_4total = ($result4 / $result2Total) * 100;
+echo $result2_4total; 
 
 //results for question 3
 
-$resultTotal = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 ");
-echo $resultTotal; 
+$result3Total = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 ");
+echo $result3Total; 
 
 $result1 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 AND answer = 1 ");
-echo ($result1 / $resultTotal) * 100;
+$result1total = ($result1 / $result3Total) * 100;
+echo $result1total; 
 
 $result2 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 AND answer = 2 ");
-echo ($result2 / $resultTotal)* 100; 
+$result2total = ($result2 / $result3Total)* 100; 
+echo result2total; 
 
-$result4 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 AND answer = 3 ");
-echo ($result3 / $resultTotal) * 100; 
+$result3 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 AND answer = 3 ");
+$result3totoal = ($result3 / $result3Total) * 100;
+echo result3totoal
 
-$result5 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 AND answer = 4 ");
-echo ($result5 / $resultTotal) * 100; 
+$result4 = mysqli_query($link,"SELECT COUNT (*) FROM `SURVEY_1_RESULTS` WHERE question_id = 3 AND answer = 4 ");
+$result4totoal = ($result4 / $result3Total) * 100;
+echo $result4total; 
 
 
 
