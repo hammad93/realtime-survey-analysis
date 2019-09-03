@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Create Survey";
+}
+<h2>@ViewBag.Title.</h2>
+
+<br /> <br /> <br />
+
+//Create Survey Form
+<div id="entry1" class="questionT" >
+        //Question label and input box
+        <label  id="reference" name ="reference" class="heading-reference" for="form-control">Question</label>
+        <input type="text" class="form-control" name="form-control" id="titleQ" form="questionTy" />
+
+        <br /><br />
+
+        //dropdown to select question type
+        <div class="form-gorup">
+            <label for="QType">Question Type</label>
+            <select name="qType" class="form-control" id="QType" onchange="showDiv()">
+                <option value="" selected="selected" disabled="disabled">Select Question Type</option>
+                <option value="0">Multiple Choice</option>
+                <option value="1">Open Ended</option>
+                <option value="2">True False</option>
+                <option value="3">Rate</option>
+            </select>
+            <br /><br />
+        </div>
+
+</div>
+
+//textbox that displays when open ended option is selected
+<div id="openE">
+    <textarea class="form-control" rows="5" id="openE_A"></textarea>
+
+</div>
+//True False buttons that displays when True False option is selected
+<div id="tF">
+    <button class="btn btn-group-sm" name="tFbutton" id="tF_true" value="true">True</button>
+    <button class="btn btn-gorup-sm" name="tFbuton" id="tF_false" value="false">False</button>
+
+</div>
+
+//radio button that displays when Multiple Choice option is selected
+<div id="multChoice">
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input type="radio" name="auto_renew" value="option">
+        
+        <input type="text" class="form-control">
+        <a href="#" id="addChoice">Add</a>
+        </span>
+    </div>
+  
+</div>
+
+
+//buttons to add another question, remove question, submit survey
+<div id="add-rem-sub-buttons">
+    <br />
+    <button type="submit" id="submitS" class="btn btn-default_submit">Submit&nbsp;</button>
+    <button type="button" id="addQ" class="btn btn-default_add">+&nbsp;</button>
+    <button type="button" id="remove" class="btn btn-default_remove">remove&nbsp;</button>
+
+</div>
+
+
+<br /> <br /> <br />
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+    //initially hides all question type choices
+
+    $(document).ready(function () {
+        $('#openE').hide();
+        $('#tF').hide();
+        $('#multChoice').hide();
+    });
+
+    //displays and hide question choices depending on user clicks
+    function showDiv() {
+
+        var x = document.getElementById("QType").value;
+
+        if (x === '0') {
+            $('#multChoice').show();
+            $('#openE').hide();
+            $('#tF').hide();
+        }
+        else if (x === '1') {
+            $('#openE').show();
+            $('#tF').hide();
+            $('#multChoice').hide();
+        }
+        else if (x === '2') {
+            $('#tF').show();
+            $('#openE').hide();
+            $('#multChoice').hide();
+        }
+
+    }
+
+      
+
+    /* try to fix add remove text button in multiple choice and the whole question form 
+    use  ? jquery and PHP ?*/
+
+        
+
+     
+</script>
+
